@@ -23,12 +23,14 @@ export default function Home() {
 
   async function login() {
     const { error } = 
+
 await supabase.auth.signInWithOtp({
-  email: email,
+  email,
   options: {
     emailRedirectTo: 'https://agent-portal-liart.vercel.app'
   }
 })
+
 
 
     if (error) {
